@@ -1,5 +1,7 @@
 <?php
 
+namespace SR\Cache;
+
 use Psr\SimpleCache\CacheInterface;
 
 /**
