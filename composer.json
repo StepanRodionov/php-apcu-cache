@@ -14,7 +14,7 @@
   },
   "autoload": {
     "psr-4": {
-      "SR\\Cache": "src"
+      "SR\\Cache\\": "src"
     }
   }
 }
