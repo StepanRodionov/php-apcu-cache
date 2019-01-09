@@ -4,12 +4,6 @@ namespace SR\Cache;
 
 use Psr\SimpleCache\CacheInterface;
 
-/**
- * Created by PhpStorm.
- * User: Админ
- * Date: 04.01.2019
- * Time: 12:38
- */
 
 class ApcuStorage implements CacheInterface
 {
