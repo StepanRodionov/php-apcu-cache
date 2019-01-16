@@ -47,6 +47,6 @@ $isVarCached = $cache->has('key');
 
 Run `composer test`.
 
-##License
+## License
 
 This component is under the MIT license. See the complete license in the [LICENSE](./LICENSE) file.
