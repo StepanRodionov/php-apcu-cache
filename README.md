@@ -3,10 +3,10 @@ This is [PSR-16](https://www.php-fig.org/psr/psr-16/) compatible cache library u
 It's provides one class ApcuCacheStorage which implements ```Psr\SimpleCache\CacheInterface``` and may be used in your code everywhere, where 
 php cache is need.
 
-# About apcu
+## About apcu
 Php-apcu provides in-memory cache, which stores variables between requests. You can read more about it in [this page](http://php.net/manual/en/ref.apcu.php).
 
-# Usage
+## Usage
 You should create instance of ApcuCacheStorage and when you'll get access to its functionality
 
 ```php
@@ -43,10 +43,10 @@ $cache->deleteMultiple([
 $isVarCached = $cache->has('key');
 ```
 
-# Tests
+## Tests
 
 Run `composer test`.
 
-License
--------
+##License
+
 This component is under the MIT license. See the complete license in the [LICENSE](./LICENSE) file.
