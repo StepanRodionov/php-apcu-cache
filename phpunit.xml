@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit bootstrap="vendor/autoload.php" colors="true">
+    <php>
+        <ini name="apc.enable_cli" value="1" />
+        <ini name="apc.use_request_time" value="0" />
+    </php>
     <testsuites>
         <testsuite name="Php apcu PSR-16 cache tests">
             <directory>tests/</directory>
         </testsuite>
     </testsuites>
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">./src/</directory>
+        </whitelist>
+    </filter>
 </phpunit>
