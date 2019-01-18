@@ -1,6 +1,6 @@
 {
   "name": "stepanrodionov/php-apcu-cache",
-  "description": "This is PSR-6 compatible cache library using php-apcu module",
+  "description": "This is PSR-16 compatible cache library using php-apcu module",
   "minimum-stability": "stable",
   "license": "MIT",
   "authors": [

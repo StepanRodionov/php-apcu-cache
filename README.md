@@ -1,3 +1,8 @@
+[![Latest Stable Version](https://poser.pugx.org/stepanrodionov/php-apcu-cache/version)](https://packagist.org/packages/stepanrodionov/php-apcu-cache)
+[![Latest Unstable Version](https://poser.pugx.org/stepanrodionov/php-apcu-cache/v/unstable)](//packagist.org/packages/stepanrodionov/php-apcu-cache)
+[![License](https://poser.pugx.org/stepanrodionov/php-apcu-cache/license)](https://packagist.org/packages/stepanrodionov/php-apcu-cache)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/29423005a7124bcf8782eb6254929d63)](https://www.codacy.com/app/pandmitr/php-apcu-cache?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=StepanRodionov/php-apcu-cache&amp;utm_campaign=Badge_Grade)
+
 # php-apcu-cache (PSR-16)
 This is [PSR-16](https://www.php-fig.org/psr/psr-16/) compatible cache library using php-apcu module.
 It's provides one class ApcuCacheStorage which implements ```Psr\SimpleCache\CacheInterface``` and may be used in your code everywhere, where 
@@ -47,6 +52,6 @@ $isVarCached = $cache->has('key');
 
 Run `composer test`.
 
-##License
+## License
 
 This component is under the MIT license. See the complete license in the [LICENSE](./LICENSE) file.
