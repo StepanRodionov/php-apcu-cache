@@ -5,7 +5,6 @@ declare(strict_types = 1);
 namespace SR\ApcuSimpleCacheTest;
 
 use PHPUnit\Framework\TestCase;
-use PHPUnit\Runner\Exception as RunnerException;
 use Psr\SimpleCache\InvalidArgumentException;
 use SR\ApcuSimpleCache\ApcuCacheStorage;
 
@@ -27,14 +26,6 @@ class ApcuCacheStorageTest extends TestCase
      */
     public function __construct($name = null, array $data = [], $dataName = '')
     {
-        if (ini_get('apc.enable_cli') == 0) {
-            throw new RunnerException('apc.enable_cli must be enabled for test');
-        };
-
-        if (ini_get('apc.use_request_time') == 1) {
-            throw new RunnerException('apc.use_request_time must be disabled for test');
-        };
-
         $this->cacheStorage = new ApcuCacheStorage();
         $this->cacheStorage->clear();
 
@@ -79,6 +70,25 @@ class ApcuCacheStorageTest extends TestCase
         foreach ($multipleMock as $key => $value) {
             self::assertEquals($value, $this->cacheStorage->get($key));
         }
+    }
+
+    /**
+     * @depends testSetMultiple
+     *
+     * @throws InvalidArgumentException
+     */
+    public function testGetMultiple()
+    {
+
+        $multipleMock = [
+            'a' => 1,
+            'b' => [12312],
+            'c' => (object)['Viva la revolution!']
+        ];
+
+        $this->cacheStorage->setMultiple($multipleMock);
+
+        self::assertEquals($multipleMock, $this->cacheStorage->getMultiple(\array_keys($multipleMock)));
     }
 
     /**
