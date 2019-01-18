@@ -1,4 +1,7 @@
 # php-apcu-cache (PSR-16)
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c5327f09229441569c9255fdc91f094e)](https://app.codacy.com/app/pandmitr/php-apcu-cache?utm_source=github.com&utm_medium=referral&utm_content=StepanRodionov/php-apcu-cache&utm_campaign=Badge_Grade_Dashboard)
+
 This is [PSR-16](https://www.php-fig.org/psr/psr-16/) compatible cache library using php-apcu module.
 It's provides one class ApcuCacheStorage which implements ```Psr\SimpleCache\CacheInterface``` and may be used in your code everywhere, where 
 php cache is need.
